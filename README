@@ -1,7 +1,7 @@
 
 
 This archive contains the distribution Dist-Zilla-Plugin-Version-Git-Flowish,
-version 0.01:
+version 0.02:
 
   Get a version number via git and a flow-inspired structure.
 
