@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::Version::Git::Flowish;
 {
-  $Dist::Zilla::Plugin::Version::Git::Flowish::VERSION = '0.02';
+  $Dist::Zilla::Plugin::Version::Git::Flowish::VERSION = '0.03';
 }
 use Moose;
 use v5.10;
@@ -90,7 +90,7 @@ Dist::Zilla::Plugin::Version::Git::Flowish - Get a version number via git and a 
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
