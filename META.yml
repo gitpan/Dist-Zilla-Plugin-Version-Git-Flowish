@@ -21,4 +21,4 @@ requires:
 resources:
   homepage: https://github.com/gphat/dist-zilla-plugin-version-git-flowish
   repository: https://github.com/gphat/dist-zilla-plugin-version-git-flowish.git
-version: 0.03
+version: 0.04

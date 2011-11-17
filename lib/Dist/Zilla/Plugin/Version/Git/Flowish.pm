@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::Version::Git::Flowish;
 {
-  $Dist::Zilla::Plugin::Version::Git::Flowish::VERSION = '0.03';
+  $Dist::Zilla::Plugin::Version::Git::Flowish::VERSION = '0.04';
 }
 use Moose;
 use v5.10;
@@ -54,12 +54,10 @@ sub provide_version {
     given($branch) {
 
         when(/$master_re/) {
-            print STDERR "WEEE\n";
             # If the branch is master then we'll get the most recent tag and
             # use it as the version number.
             $self->log_debug([ 'fetching latest tag due to master branch' ]);
             my $tag = `git describe --tags --abbrev=0`;
-            print STDERR "$tag\n";
             $tag =~ /$tag_re/;
             $version = $1;
         }
@@ -90,7 +88,7 @@ Dist::Zilla::Plugin::Version::Git::Flowish - Get a version number via git and a 
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
