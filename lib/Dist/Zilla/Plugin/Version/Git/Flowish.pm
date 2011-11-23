@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::Version::Git::Flowish;
 {
-  $Dist::Zilla::Plugin::Version::Git::Flowish::VERSION = '0.04';
+  $Dist::Zilla::Plugin::Version::Git::Flowish::VERSION = '0.05';
 }
 use Moose;
 use v5.10;
@@ -67,6 +67,10 @@ sub provide_version {
             # branch name.
             $version = $1;
         }
+        default {
+            $self->log_fatal("Couldn't find a version from master or release. Check regexp?");
+        }
+        
     }
 
     $self->log_debug([ 'returning version %s' ]);
@@ -88,7 +92,7 @@ Dist::Zilla::Plugin::Version::Git::Flowish - Get a version number via git and a 
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
