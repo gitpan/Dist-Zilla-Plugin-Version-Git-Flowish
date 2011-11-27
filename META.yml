@@ -16,9 +16,10 @@ meta-spec:
   version: 1.4
 name: Dist-Zilla-Plugin-Version-Git-Flowish
 requires:
+  Dist::Zilla::Role::VersionProvider: 0
   Moose: 0
   perl: v5.10
 resources:
   homepage: https://github.com/gphat/dist-zilla-plugin-version-git-flowish
   repository: https://github.com/gphat/dist-zilla-plugin-version-git-flowish.git
-version: 0.05
+version: 0.06

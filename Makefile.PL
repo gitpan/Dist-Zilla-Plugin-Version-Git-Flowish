@@ -24,9 +24,10 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "Dist::Zilla::Plugin::Version::Git::Flowish",
   "PREREQ_PM" => {
+    "Dist::Zilla::Role::VersionProvider" => 0,
     "Moose" => 0
   },
-  "VERSION" => "0.05",
+  "VERSION" => "0.06",
   "test" => {
     "TESTS" => "t/*.t"
   }
