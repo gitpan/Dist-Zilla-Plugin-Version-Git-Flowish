@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::Version::Git::Flowish;
 {
-  $Dist::Zilla::Plugin::Version::Git::Flowish::VERSION = '0.07';
+  $Dist::Zilla::Plugin::Version::Git::Flowish::VERSION = '0.08';
 }
 use Moose;
 use v5.10;
@@ -38,7 +38,7 @@ sub provide_version {
     my ($branch) = `git branch --no-color 2> /dev/null` =~ /^\* (.*)/m;
 
     $self->log_debug([ 'picked up branch %s', $branch ]);
-    
+
     my $version = undef;
     my $extra_version = $ENV{'FLOWISH_EXTRA_VERSION'};
 
@@ -83,7 +83,7 @@ sub provide_version {
         $version .= '_'.$extra_version;
     }
 
-    $self->log_debug([ 'returning version %s' ]);
+    $self->log_debug([ 'returning version %s', $version ]);
     return $version;
 }
 
@@ -102,7 +102,7 @@ Dist::Zilla::Plugin::Version::Git::Flowish - Get a version number via git and a 
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 SYNOPSIS
 
@@ -172,7 +172,7 @@ Cory G Watson <gphat@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Infinity Interactive.
+This software is copyright (c) 2012 by Infinity Interactive.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
