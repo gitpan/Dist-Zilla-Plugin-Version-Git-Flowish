@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::Version::Git::Flowish;
 {
-  $Dist::Zilla::Plugin::Version::Git::Flowish::VERSION = '0.08';
+  $Dist::Zilla::Plugin::Version::Git::Flowish::VERSION = '0.09';
 }
 use Moose;
 use v5.10;
@@ -102,7 +102,7 @@ Dist::Zilla::Plugin::Version::Git::Flowish - Get a version number via git and a 
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 
@@ -133,7 +133,7 @@ The environment variable FLOWISH_VERSION is checked and used if set.
 
 =head2 Branch
 
-The current branch is attained via a call to git granch and grepping for
+The current branch is attained via a call to git branch and grepping for
 the leading *.
 
     git branch --no-color 2> /dev/null
